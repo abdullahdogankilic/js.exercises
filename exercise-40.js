@@ -1,5 +1,5 @@
 async function tempFetch() {
-  const url = "https://jsonplaceholder.typicode.com/users";
+  const url = "https://jsonplaceholder.typicode.com/todos";
   let ids = [];
 
   await fetch(url)
