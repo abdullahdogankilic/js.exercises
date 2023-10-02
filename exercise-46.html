@@ -20,7 +20,8 @@
 </html>
 
 <script>
-  const firstName = document.querySelector(".form-input");
-
-  console.log(firstName.value);
+  const firstName = document.querySelectorAll(".form-input");
+  firstName.forEach((e) => {
+    console.log(e.value);
+  });
 </script>
