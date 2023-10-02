@@ -1,13 +1,10 @@
 function printAsyncName(callback, name) {
-  let id = setInterval(() => {
+  let id = setTimeout(() => {
     callback();
     setTimeout(() => {
       console.log(name);
     }, 2000);
   }, 1000);
-  setTimeout(() => {
-    clearInterval(id);
-  }, 5000);
 }
 function hello_name() {
   console.log("hello");
