@@ -5,7 +5,7 @@ const promis = (isLogged) => {
       const randomNum = Math.random();
       resolve(randomNum);
     } else {
-      reject("False");
+      reject(new Error("False"));
     }
   });
 };
@@ -15,7 +15,7 @@ const promis1 = (num) => {
     if (num > 0.5) {
       resolve({ name: "John", age: 24 });
     } else {
-      reject("randomV < 0.5");
+      reject(new Error("randomV < 0.5"));
     }
   });
 };
@@ -28,8 +28,8 @@ promis(isLogged)
   .then((message) => {
     console.log(message);
   })
-  .catch((e) => {
-    console.log(e);
+  .catch((error) => {
+    console.error(error.message);
   })
   .finally(() => {
     console.log("Promise block ended");
