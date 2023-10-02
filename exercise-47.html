@@ -23,8 +23,14 @@
   const firstName = document.querySelector("#firstName");
   const lastName = document.querySelector("#lastName");
   const age = document.querySelector("#age");
-
-  console.log(
-    `First Name:${firstName.value}  Last Name:${lastName.value}  Age:${age.value}`
-  );
+  const label = document.querySelectorAll("label");
+  label.forEach((e) => {
+    if (e.textContent === "First Name:") {
+      console.log(e.textContent + firstName.value);
+    } else if (e.textContent === "Last Name:") {
+      console.log(e.textContent + lastName.value);
+    } else if (e.textContent === "Age:") {
+      console.log(e.textContent + age.value);
+    }
+  });
 </script>
