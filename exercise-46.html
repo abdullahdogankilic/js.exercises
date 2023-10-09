@@ -20,8 +20,8 @@
 </html>
 
 <script>
-  const firstName = document.querySelectorAll(".form-input");
-  firstName.forEach((e) => {
+  let textInputs = document.querySelectorAll('input[type="text"]');
+  textInputs.forEach((e) => {
     console.log(e.value);
   });
 </script>
